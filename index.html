@@ -1,58 +1,316 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini Remote - Privacy Policy</title>
+<title>Handpad — Support</title>
+<meta name="description" content="Support and help for Handpad — turn your iPhone into a wireless Mac trackpad and keyboard.">
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
-  h1 { font-size: 1.5em; }
-  h2 { font-size: 1.1em; margin-top: 1.5em; }
-  .date { color: #888; font-size: 0.9em; }
+  :root {
+    --bg: #0a0a0a;
+    --bg-card: #161616;
+    --text: #f5f5f7;
+    --text-dim: #a1a1a6;
+    --accent: #0a84ff;
+    --border: #2c2c2e;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+                 system-ui, "Helvetica Neue", "PingFang SC", "Microsoft YaHei",
+                 sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .app-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #0a84ff 0%, #0040dd 100%);
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 32px rgba(10, 132, 255, 0.3);
+  }
+  .app-icon svg {
+    width: 56px;
+    height: 56px;
+    color: white;
+  }
+  h1 {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px;
+  }
+  .tagline {
+    font-size: 18px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 48px;
+  }
+  .lang-toggle button {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s ease;
+  }
+  .lang-toggle button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .lang-toggle button:hover:not(.active) {
+    color: var(--text);
+    border-color: #444;
+  }
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+  }
+  p { margin: 0 0 14px; color: var(--text); }
+  .dim { color: var(--text-dim); }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    padding: 8px 0;
+    color: var(--text-dim);
+  }
+  ul li::before {
+    content: "—";
+    color: var(--accent);
+    margin-right: 12px;
+  }
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .faq-q {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .faq-a {
+    color: var(--text-dim);
+    margin: 0;
+  }
+  .contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+  }
+  .contact-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .contact-card a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  footer a:hover { color: var(--text); }
+  [data-lang] { display: none; }
+  [data-lang].visible { display: block; }
+  span[data-lang].visible { display: inline; }
+  @media (max-width: 480px) {
+    h1 { font-size: 34px; }
+    h2 { font-size: 20px; }
+    .container { padding: 40px 20px 60px; }
+  }
 </style>
 </head>
 <body>
-<h1>Mini Remote - Privacy Policy</h1>
-<p class="date">Last updated: 2026-05-26</p>
+<div class="container">
 
-<h2>Overview</h2>
-<p>Mini Remote turns your iPhone or iPad into a wireless trackpad and keyboard for your Mac. We respect your privacy and designed the app with a simple principle: <strong>your data stays on your devices</strong>.</p>
+  <header>
+    <div class="app-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="6" width="18" height="12" rx="2"/>
+        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+      </svg>
+    </div>
+    <h1>Handpad</h1>
+    <p class="tagline" data-lang="en">Your iPhone, your Mac's trackpad</p>
+    <p class="tagline" data-lang="zh">把 iPhone 变成 Mac 触控板</p>
+  </header>
 
-<h2>Data Collection</h2>
-<p>Mini Remote does <strong>not</strong> collect, store, or transmit any personal data. Specifically:</p>
-<ul>
-  <li>No analytics or tracking</li>
-  <li>No advertising</li>
-  <li>No user accounts</li>
-  <li>No data sent to any server</li>
-</ul>
+  <div class="lang-toggle">
+    <button onclick="setLang('en')" id="btn-en">English</button>
+    <button onclick="setLang('zh')" id="btn-zh">中文</button>
+  </div>
 
-<h2>Local Data</h2>
-<p>The app stores the following data locally on your device only:</p>
-<ul>
-  <li><strong>Device nickname</strong> — a name you choose, used for Bluetooth/WiFi identification between your devices</li>
-  <li><strong>Custom keyboard layouts</strong> — button configurations you create</li>
-  <li><strong>Encryption key</strong> — a randomly generated key stored in the iOS Keychain, used to secure WiFi communication with your Mac</li>
-</ul>
-<p>None of this data ever leaves your local network.</p>
+  <!-- ABOUT -->
+  <section>
+    <div data-lang="en">
+      <h2>About Handpad</h2>
+      <p>Handpad turns your iPhone into a precision wireless trackpad and keyboard for your Mac. Slide, type, present, and control — Bluetooth pairs instantly, WiFi auto-boosts for low latency, and your data never leaves your local network.</p>
+    </div>
+    <div data-lang="zh">
+      <h2>关于 Handpad</h2>
+      <p>Handpad 把 iPhone 变成 Mac 的精确无线触控板和键盘。滑动、打字、演示、控制 — 蓝牙瞬连,WiFi 自动加速降延迟,数据全在本地,从不离开你的局域网。</p>
+    </div>
+  </section>
 
-<h2>Network Communication</h2>
-<p>Mini Remote communicates exclusively with the paired Mac app over Bluetooth Low Energy and/or local WiFi. All WiFi traffic is encrypted (AES-256-GCM). No internet connection is required or used.</p>
+  <!-- GETTING STARTED -->
+  <section>
+    <div data-lang="en">
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Install the free Handpad companion app on your Mac</li>
+        <li>Open both the iPhone app and the Mac app</li>
+        <li>Enable Bluetooth on both devices</li>
+        <li>First connection pairs over Bluetooth; subsequent sessions auto-boost to WiFi if available on the same local network</li>
+      </ul>
+    </div>
+    <div data-lang="zh">
+      <h2>快速上手</h2>
+      <ul>
+        <li>在 Mac 上安装免费的 Handpad 配套 app</li>
+        <li>同时打开 iPhone 和 Mac 端 app</li>
+        <li>两台设备都打开蓝牙</li>
+        <li>首次配对走蓝牙,之后同一局域网内自动切换到 WiFi 模式以降低延迟</li>
+      </ul>
+    </div>
+  </section>
 
-<h2>Permissions</h2>
-<ul>
-  <li><strong>Bluetooth</strong> — required to connect to Mac</li>
-  <li><strong>Local Network</strong> — used for low-latency WiFi connection on the same network</li>
-  <li><strong>Microphone / Speech Recognition</strong> — only used if you invoke iOS dictation via the system keyboard; audio is processed by iOS, not by Mini Remote</li>
-</ul>
+  <!-- FAQ -->
+  <section>
+    <h2 data-lang="en">Frequently Asked Questions</h2>
+    <h2 data-lang="zh">常见问题</h2>
 
-<h2>Children's Privacy</h2>
-<p>Mini Remote does not collect any data from anyone, including children.</p>
+    <div data-lang="en">
+      <div class="faq-item">
+        <div class="faq-q">Does Handpad work without internet?</div>
+        <p class="faq-a">Yes. Handpad communicates entirely over Bluetooth and your local WiFi network. No internet connection is required or used.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why does the iPhone app say "Waiting for Mac"?</div>
+        <p class="faq-a">The iPhone is ready but hasn't seen the Mac yet. Open the Handpad Mac app, make sure Bluetooth is enabled on both devices, and keep them within ~10 meters of each other.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can one iPhone control multiple Macs?</div>
+        <p class="faq-a">You can pair with multiple Macs, but only one active connection at a time. Switch between paired Macs from the Mac picker in the iPhone app's settings.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does Handpad support Chinese / Japanese / Korean input?</div>
+        <p class="faq-a">Yes — Handpad uses your iPhone's native keyboard, so every input method, dictionary, and custom shortcut you have on iOS works exactly the same when typing into your Mac.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I customize the shortcut buttons?</div>
+        <p class="faq-a">Yes. Tap "Edit" on the Shortcuts page to rearrange buttons, change actions, or create new layouts for different scenarios (movies, presentations, games, etc.).</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why does the WiFi connection feel laggy?</div>
+        <p class="faq-a">Make sure your iPhone and Mac are on the same WiFi network and, if possible, on a 5 GHz band. Mesh networks with band steering can sometimes route the two devices through different access points, increasing latency.</p>
+      </div>
+    </div>
 
-<h2>Changes</h2>
-<p>If this policy changes, the updated version will be posted here.</p>
+    <div data-lang="zh">
+      <div class="faq-item">
+        <div class="faq-q">不联网能用 Handpad 吗?</div>
+        <p class="faq-a">可以。Handpad 仅在蓝牙和你的局域网之间通信,完全不需要也不会使用互联网。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">iPhone 一直显示 "Waiting for Mac" 怎么办?</div>
+        <p class="faq-a">这表示 iPhone 端就绪了但还没看到 Mac。请打开 Mac 端的 Handpad,确认两台设备的蓝牙都开着,并且距离不超过 10 米。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">一台 iPhone 能控制多台 Mac 吗?</div>
+        <p class="faq-a">可以配对多台 Mac,但同一时间只能激活一台连接。在 iPhone 端 app 的设置里可以切换 Mac。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">支持中文 / 日文 / 韩文输入吗?</div>
+        <p class="faq-a">完全支持。Handpad 使用 iPhone 原生键盘,你在 iOS 上设置好的所有输入法、词库、自定义短语都能正常工作。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">能自定义快捷键按钮吗?</div>
+        <p class="faq-a">可以。点击 Shortcuts 页面右上角的 "Edit",可以重排按钮、修改动作,或为不同场景(看片、演示、游戏)创建新的布局。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">WiFi 模式下感觉延迟很大?</div>
+        <p class="faq-a">请确认 iPhone 和 Mac 在同一 WiFi 网络下,尽量使用 5 GHz 频段。Mesh 路由器的 band steering 偶尔会让两台设备走不同 AP,导致延迟升高。</p>
+      </div>
+    </div>
+  </section>
 
-<h2>Contact</h2>
-<p>Questions? Email: <a href="mailto:xiaochuan.li@transreport.co.uk">xiaochuan.li@transreport.co.uk</a></p>
+  <!-- CONTACT -->
+  <section>
+    <h2 data-lang="en">Contact Support</h2>
+    <h2 data-lang="zh">联系支持</h2>
+
+    <div class="contact-card">
+      <p data-lang="en" class="dim">Found a bug, have a feature request, or just want to say hi?</p>
+      <p data-lang="zh" class="dim">发现 bug、有功能建议、或者就想打个招呼?</p>
+      <a href="mailto:xiaochuan.li@transreport.co.uk?subject=Handpad%20Support">xiaochuan.li@transreport.co.uk</a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <span>·</span>
+    <span>© 2026 Handpad</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    try { localStorage.setItem('handpad-lang', lang); } catch (e) {}
+  }
+  const saved = (() => { try { return localStorage.getItem('handpad-lang'); } catch (e) { return null; } })();
+  const initial = saved || (navigator.language && navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en');
+  setLang(initial);
+</script>
+
 </body>
 </html>

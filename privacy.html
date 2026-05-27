@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handpad — Privacy Policy</title>
+<meta name="description" content="Handpad privacy policy — no data collection, no tracking, no accounts.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-card: #161616;
+    --text: #f5f5f7;
+    --text-dim: #a1a1a6;
+    --accent: #0a84ff;
+    --border: #2c2c2e;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+                 system-ui, "Helvetica Neue", "PingFang SC", "Microsoft YaHei",
+                 sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 40px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--text); }
+  .back-link::before { content: "←"; }
+  header { margin-bottom: 32px; }
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .date {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+  }
+  .lang-toggle {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 40px;
+  }
+  .lang-toggle button {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 6px 14px;
+    border-radius: 18px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s ease;
+  }
+  .lang-toggle button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .lang-toggle button:hover:not(.active) {
+    color: var(--text);
+    border-color: #444;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 36px 0 12px;
+    color: var(--text);
+  }
+  p { margin: 0 0 14px; color: var(--text); }
+  ul { padding-left: 20px; margin: 0 0 16px; color: var(--text); }
+  ul li { padding: 4px 0; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  [data-lang] { display: none; }
+  [data-lang].visible { display: block; }
+  footer {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 18px; }
+    .container { padding: 32px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back-link">Handpad</a>
+
+  <header>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <h1 data-lang="zh">隐私政策</h1>
+    <p class="date">Last updated: 2026-05-27</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button onclick="setLang('en')" id="btn-en">English</button>
+    <button onclick="setLang('zh')" id="btn-zh">中文</button>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <h2>Overview</h2>
+    <p>Handpad turns your iPhone or iPad into a wireless trackpad and keyboard for your Mac. We respect your privacy and built the app on a single principle: <strong>your data stays on your devices</strong>.</p>
+
+    <h2>Data Collection</h2>
+    <p>Handpad does <strong>not</strong> collect, store, or transmit any personal data. Specifically:</p>
+    <ul>
+      <li>No analytics or tracking</li>
+      <li>No advertising</li>
+      <li>No user accounts</li>
+      <li>No data sent to any server, ever</li>
+    </ul>
+
+    <h2>Local Data</h2>
+    <p>The app stores the following data <strong>locally on your device only</strong>:</p>
+    <ul>
+      <li><strong>Device nickname</strong> — a name you choose, used to identify your devices over Bluetooth and WiFi</li>
+      <li><strong>Custom shortcut layouts</strong> — button configurations you create</li>
+      <li><strong>Encryption key</strong> — a randomly generated key stored in the iOS Keychain, used to secure the WiFi link to your Mac</li>
+      <li><strong>App preferences</strong> — UI settings, last-used page, onboarding state</li>
+    </ul>
+    <p>None of this data ever leaves your local network.</p>
+
+    <h2>Network Communication</h2>
+    <p>Handpad communicates exclusively with the paired Handpad Mac app, using:</p>
+    <ul>
+      <li>Bluetooth Low Energy (BLE) for pairing and low-bandwidth control</li>
+      <li>Local WiFi (TCP, same network only) for higher-bandwidth input streams</li>
+    </ul>
+    <p>All WiFi traffic is end-to-end encrypted using <strong>AES-256-GCM</strong> with a key established during Bluetooth pairing. No internet connection is required or used.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Bluetooth</strong> — required to discover and pair with your Mac</li>
+      <li><strong>Local Network</strong> — used to send input to your Mac over WiFi for lower latency</li>
+      <li><strong>Microphone / Speech Recognition</strong> — only used if you invoke iOS dictation from the system keyboard. Audio is processed by iOS on-device (or by Apple's servers, depending on your iOS settings), not by Handpad. Handpad only receives the recognized text.</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>Handpad does not integrate any third-party SDKs for analytics, advertising, crash reporting, or tracking. The app is fully self-contained.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Handpad does not collect any data from anyone, including children under 13. The app is safe for all ages.</p>
+
+    <h2>Data Retention &amp; Deletion</h2>
+    <p>Because we don't collect any data, there is nothing for us to retain or delete on our end. To remove all locally stored Handpad data, simply uninstall the app — iOS will clear its Keychain entries and stored preferences.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If this policy ever changes, the updated version will be posted on this page with a new "Last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Email <a href="mailto:xiaochuan.li@transreport.co.uk?subject=Handpad%20Privacy">xiaochuan.li@transreport.co.uk</a>.</p>
+  </div>
+
+  <!-- CHINESE -->
+  <div data-lang="zh">
+    <h2>概述</h2>
+    <p>Handpad 把你的 iPhone 或 iPad 变成 Mac 的无线触控板和键盘。我们尊重你的隐私,并基于一个原则设计这款应用:<strong>你的数据只留在你的设备上</strong>。</p>
+
+    <h2>数据收集</h2>
+    <p>Handpad <strong>不</strong>收集、存储或传输任何个人数据。具体来说:</p>
+    <ul>
+      <li>无分析或追踪</li>
+      <li>无广告</li>
+      <li>无用户账号</li>
+      <li>不向任何服务器发送数据,永不</li>
+    </ul>
+
+    <h2>本地数据</h2>
+    <p>App 仅在 <strong>你本机设备上</strong> 存储以下数据:</p>
+    <ul>
+      <li><strong>设备昵称</strong> — 你自己起的名字,用于在蓝牙和 WiFi 上识别你的设备</li>
+      <li><strong>自定义快捷键布局</strong> — 你创建的按钮配置</li>
+      <li><strong>加密密钥</strong> — 随机生成的密钥,存于 iOS Keychain,用于加密与 Mac 的 WiFi 链路</li>
+      <li><strong>App 偏好设置</strong> — 界面设置、上次使用的页面、引导状态</li>
+    </ul>
+    <p>这些数据永不离开你的局域网。</p>
+
+    <h2>网络通信</h2>
+    <p>Handpad 只与配对的 Handpad Mac 端 app 通信,使用:</p>
+    <ul>
+      <li>蓝牙低功耗 (BLE) 用于配对和低带宽控制</li>
+      <li>本地 WiFi (TCP,仅同一网络) 用于高带宽输入流</li>
+    </ul>
+    <p>所有 WiFi 流量使用 <strong>AES-256-GCM</strong> 端到端加密,密钥在蓝牙配对阶段建立。无需也不会使用互联网连接。</p>
+
+    <h2>权限</h2>
+    <ul>
+      <li><strong>蓝牙</strong> — 用于发现并与你的 Mac 配对</li>
+      <li><strong>本地网络</strong> — 用于在 WiFi 上向 Mac 发送输入,降低延迟</li>
+      <li><strong>麦克风 / 语音识别</strong> — 仅当你从系统键盘调用 iOS 语音听写时使用。音频由 iOS 在本机处理(或根据你的 iOS 设置由 Apple 服务器处理),而非由 Handpad 处理。Handpad 只接收识别后的文本。</li>
+    </ul>
+
+    <h2>第三方服务</h2>
+    <p>Handpad 未集成任何第三方 SDK 用于分析、广告、崩溃上报或追踪。App 完全自包含。</p>
+
+    <h2>儿童隐私</h2>
+    <p>Handpad 不从任何人收集数据,包括 13 岁以下儿童。App 对所有年龄段都安全。</p>
+
+    <h2>数据保留与删除</h2>
+    <p>由于我们不收集任何数据,我们这一端没有任何数据可保留或删除。如需删除本机所有 Handpad 数据,只需卸载 app — iOS 会清除其 Keychain 条目和存储的偏好设置。</p>
+
+    <h2>政策变更</h2>
+    <p>本政策如有变更,更新版本将在此页发布,并标注新的 "最后更新" 日期。</p>
+
+    <h2>联系方式</h2>
+    <p>对本政策有疑问?请发邮件至 <a href="mailto:xiaochuan.li@transreport.co.uk?subject=Handpad%20Privacy">xiaochuan.li@transreport.co.uk</a>。</p>
+  </div>
+
+  <footer>
+    <span>© 2026 Handpad</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    try { localStorage.setItem('handpad-lang', lang); } catch (e) {}
+  }
+  const saved = (() => { try { return localStorage.getItem('handpad-lang'); } catch (e) { return null; } })();
+  const initial = saved || (navigator.language && navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en');
+  setLang(initial);
+</script>
+
+</body>
+</html>
