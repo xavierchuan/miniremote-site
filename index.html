@@ -161,6 +161,32 @@
     h2 { font-size: 20px; }
     .container { padding: 40px 20px 60px; }
   }
+  .download {
+    text-align: center;
+    margin: 0 auto 48px;
+    max-width: 520px;
+  }
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 14px;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  .download-btn:hover { background: #0070e0; }
+  .download-btn:active { transform: scale(0.98); }
+  .download-btn svg { width: 22px; height: 22px; }
+  .download-meta {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
 </style>
 </head>
 <body>
@@ -178,6 +204,17 @@
   <div class="lang-toggle">
     <button onclick="setLang('en')" id="btn-en">English</button>
     <button onclick="setLang('zh')" id="btn-zh">中文</button>
+  </div>
+
+  <!-- DOWNLOAD -->
+  <div class="download">
+    <a class="download-btn" href="https://github.com/xavierchuan/miniremote-site/releases/download/v1.0-mac/Handpad-1.0.dmg">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5 1.4-1.4L11 12.2V4h2v8.2l2.6-2.6L17 11l-5 5zm-7 4v-2h14v2H5z"/></svg>
+      <span data-lang="en">Download for Mac</span>
+      <span data-lang="zh">下载 Mac 版</span>
+    </a>
+    <p class="download-meta" data-lang="en">macOS 13 Ventura or later · Free · Signed &amp; notarized by Apple</p>
+    <p class="download-meta" data-lang="zh">macOS 13 Ventura 或更高 · 免费 · 经 Apple 签名公证</p>
   </div>
 
   <!-- ABOUT -->
